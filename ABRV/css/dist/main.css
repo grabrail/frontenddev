@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css?family=Merriweather:300,900|Six+Caps");
+body {
+  font-family: "Merriweather", serif;
+  font-size: 1rem;
+  font-weight: 300;
+  color: #252525;
+  line-height: 1.6;
+  display: grid;
+  grid-template-rows: 10em 25vh auto 10em;
+  grid-template-columns: 1fr 5fr 2fr 1fr;
+  grid-template-areas: "header header header header" "hero hero hero hero" ". main main ." "footer footer footer footer";
+  grid-column-gap: 1.5em;
+}
+
+header {
+  grid-area: header;
+}
+
+header,
+footer {
+  background: #252525;
+  color: #e9d20f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-title,
+.footer-title {
+  font-family: "Six Caps", sans-serif;
+  font-size: 2.875rem;
+  color: #e9d20f;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+}
+
+.hero {
+  grid-area: hero;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+}
+
+.hero-title {
+  font-family: "Six Caps", sans-serif;
+  font-size: 6rem;
+  color: #e9d20f;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  margin: 0;
+}
+
+.hero-subtitle {
+  font-family: "Merriweather", serif;
+  font-size: 2.875rem;
+  font-weight: 300;
+  color: #fff;
+  margin: 0;
+}
+
+main {
+  grid-area: main;
+}
+
+/*aside {
+  grid-area: sidebar;
+}*/
+footer {
+  grid-area: footer;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: min-content auto;
+  grid-template-areas: "img title" "img content";
+  box-shadow: 0 0 1em rgba(0, 0, 0, 0.5);
+  padding: 1em;
+  grid-column-gap: 1.5em;
+  margin-bottom: 1em;
+  background: red;
+}
+
+.card-img {
+  grid-area: img;
+  max-width: 100%;
+}
+
+.card-title {
+  grid-area: title;
+  margin: 0;
+  font-weight: 300;
+}
+
+.card-content {
+  grid-area: content;
+}
